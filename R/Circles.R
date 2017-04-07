@@ -40,7 +40,7 @@ TwoCircles <- function(r,d,V) {
 	VLabels <- data.frame(Label=rep("unset",nrow(xy)),x=NA,y=NA,hjust=I("center"),vjust=I("bottom"))
 	VLabels$vjust <- ifelse(abovebelow>0,"bottom","top")
 	VLabels[2,]$hjust="right"
-	VLabels[1,]$hjust="left"
+	VLabels[3,]$hjust="left"
 	VLabels[,2:3] <- xy
 	VLabels$Label <- VennSetNames(as(object,"Venn"))
 	print(VLabels)
