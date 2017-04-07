@@ -30,7 +30,7 @@ TwoCircles <- function(r,d,V) {
 
 .circle.SetLabelPositions <- function(object,radii,centres){
 	yscale <- diff(VisibleRange(object)[,2]);
-	smidge <- 0.01*yscale
+	smidge <- 0.05*yscale
 	xy <- centres
 	abovebelow <- rep(1,NumberOfSets(object))
 	if (NumberOfSets(object)==3) {
