@@ -39,8 +39,8 @@ TwoCircles <- function(r,d,V) {
 	xy[,2] <- xy[,2]+abovebelow*(radii+smidge)
 	VLabels <- data.frame(Label=rep("unset",nrow(xy)),x=NA,y=NA,hjust=I("center"),vjust=I("bottom"))
 	VLabels$vjust <- ifelse(abovebelow>0,"bottom","top")
-	VLabels[2]$hjust=I("right")
-	VLabels[3]$hjust=I("left")
+	VLabels[,1]$hjust=I("right")
+	VLabels[,2]$hjust=I("left")
 	VLabels[,2:3] <- xy
 	VLabels$Label <- VennSetNames(as(object,"Venn"))
 	print(VLabels)
